@@ -1868,7 +1868,7 @@ def remote_caching_flags(platform, accept_cached=True):
 
     if is_mac() and is_lab_machine():
         # Use a local cache server for our physical macOS machines in the lab.
-        flags = ["--remote_cache=http://100.107.73.147"]
+        flags = ["--remote_cache=http://[2a00:79e1:abc:8602:515:b73d:76f0:5045]"]
     else:
         # Use RBE for caching builds running on GCE.
         protocol = "grpcs://" if is_mac() else ""
